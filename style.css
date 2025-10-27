@@ -1,0 +1,40 @@
+/* Este arquivo usa sintaxe @layer do Tailwind CSS. 
+  Ele será processado pelo CDN do Tailwind no navegador.
+*/
+
+@layer base {
+    html {
+        font-family: 'Inter', sans-serif;
+        scroll-behavior: smooth;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', sans-serif;
+    }
+}
+@layer utilities {
+    /* Classe para animação de fade-in-up */
+    .reveal-fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .reveal-fade-right {
+        opacity: 0;
+        transform: translateX(-30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    /* Classe para animação de pulso sutil no botão CTA */
+    .animate-subtle-pulse {
+        animation: subtlePulse 2.5s infinite ease-in-out;
+    }
+    @keyframes subtlePulse {
+        0%, 100% {
+            box-shadow: 0 0 15px rgba(215, 38, 56, 0.4);
+            transform: scale(1);
+        }
+        50% {
+            box-shadow: 0 0 25px rgba(215, 38, 56, 0.8);
+            transform: scale(1.02);
+        }
+    }
+}

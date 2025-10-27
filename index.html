@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência MIRA | Tráfego Pago e Design Estratégico</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide-icons@latest/dist/lucide.min.js"></script>
+    
+    <!-- ScrollReveal JS -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <!-- Configuração do Tailwind (DEVE ficar no HTML) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mira-red': '#D72638',
+                        'mira-black': '#000000',
+                        'mira-white': '#FAFAFA',
+                        'mira-offwhite': '#F5F5F5',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'heading': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Link para o CSS customizado -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bg-mira-black text-mira-white overflow-x-hidden">
+
+    <!-- ===== 1. Cabeçalho (Header) ===== -->
+    <header id="header" class="bg-mira-black/90 backdrop-blur-md text-mira-white p-4 fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto flex justify-between items-center px-4">
+            <!-- Logotipo -->
+            <a href="#inicio" class="text-3xl font-heading font-bold">
+                MIRA<span class="text-mira-red">.</span>
+            </a>
+            
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex space-x-6 items-center font-medium">
+                <a href="#quem-somos" class="hover:text-mira-red transition-colors duration-200">Quem Somos</a>
+                <a href="#estrategia" class="hover:text-mira-red transition-colors duration-200">Serviços</a>
+                <a href="#metodologia" class="hover:text-mira-red transition-colors duration-200">Metodologia</a>
+                <a href="#por-que-mira" class="hover:text-mira-red transition-colors duration-200">Por Que a MIRA</a>
+                <a href="#contato" class="hover:text-mira-red transition-colors duration-200">Contato</a>
+            </div>
+            
+            <!-- Botão CTA Desktop -->
+            <a href="#contato" class="hidden md:block bg-mira-red px-6 py-2 rounded-lg font-bold hover:bg-opacity-80 transition-all shadow-md hover:shadow-mira-red/50">
+                Fale Conosco
+            </a>
+
+            <!-- Botão Menu Mobile -->
+            <button id="menu-btn" class="md:hidden z-50">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </nav>
+        
+        <!-- Menu Mobile (Dropdown) -->
+        <div id="mobile-menu" class="md:hidden hidden absolute top-0 left-0 w-full h-screen bg-mira-black/95 backdrop-blur-xl flex flex-col items-center justify-center space-y-8 z-40">
+            <a href="#quem-somos" class="text-2xl font-heading hover:text-mira-red transition-colors duration-200">Quem Somos</a>
+            <a href="#estrategia" class="text-2xl font-heading hover:text-mira-red transition-colors duration-200">Serviços</a>
+            <a href="#metodologia" class="text-2xl font-heading hover:text-mira-red transition-colors duration-200">Metodologia</a>
+            <a href="#por-que-mira" class="text-2xl font-heading hover:text-mira-red transition-colors duration-200">Por Que a MIRA</a>
+            <a href="#contato" class="text-2xl font-heading hover:text-mira-red transition-colors duration-200">Contato</a>
+            <a href="#contato" class="mt-8 bg-mira-red px-8 py-3 rounded-lg font-bold text-lg">
+                Fale Conosco
+            </a>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- ===== 2. Hero Section ===== -->
+        <section id="inicio" class="min-h-screen bg-mira-black pt-32 pb-20 flex items-center relative overflow-hidden">
+            <!-- Gradiente de fundo sutil -->
+            <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 20% 20%, #D72638 0%, transparent 40%), radial-gradient(circle at 80% 80%, #D72638 0%, transparent 40%);"></div>
+            
+            <div class="container mx-auto text-center px-4 z-10;">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-heading font-black uppercase tracking-tight reveal-fade-up">
+                    Meta <span class="text-mira-red">•</span> Inovação
+                    <br class="hidden md:block">
+                    Resultado <span class="text-mira-red">•</span> Autenticidade
+                </h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mt-6 text-mira-offwhite/80 reveal-fade-up" style="transition-delay: 0.2s; text-align: center; align-items: center;">
+                    A MIRA é uma agência que une tráfego pago estratégico e design criativo para gerar resultados consistentes e impactantes.
+                </p>
+                <a href="#contato" class="inline-block bg-mira-red px-10 py-4 rounded-lg font-bold text-lg mt-10 transition-all shadow-lg animate-subtle-pulse reveal-fade-up" style="transition-delay: 0.4; text-align: center; align-items: center;">
+                    Vamos MIRAR juntos?
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== 3. Seção “Quem Somos” ===== -->
+        <section id="quem-somos" class="bg-mira-offwhite text-mira-black py-20 md:py-32">
+            <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+                <!-- Conteúdo de Texto -->
+                <div class="reveal-fade-right">
+                    <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6">
+                        Quem <span class="text-mira-red">Somos</span>
+                    </h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        A MIRA ajuda pequenas e médias empresas a alcançarem suas metas comerciais com soluções integradas, combinando performance e autenticidade de marca.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mt-4">
+                        Unimos expertise técnica em Meta Ads com criatividade visual, criando campanhas que atraem e convertem de verdade.
+                    </p>
+                </div>
+                <!-- Imagem/Ilustração -->
+                <div class="reveal-fade-up">
+                    <img src="logo.jpeg" 
+                         alt="Ilustração de design estratégico e performance" 
+                         class="rounded-lg shadow-2xl w-full h-auto">
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== 4. Seção “O Poder da Estratégia Integrada” (Serviços) ===== -->
+        <section id="estrategia" class="bg-mira-black text-mira-white py-20 md:py-32">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl md:text-5xl font-heading font-bold text-center mb-16 reveal-fade-up">
+                    O Poder da <span class="text-mira-red">Estratégia Integrada</span>
+                </h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Card 1: Consistência Visual -->
+                    <div class="bg-gray-900/50 p-8 rounded-lg border border-gray-800 transition-all duration-300 hover:border-mira-red hover:-translate-y-2 reveal-fade-up">
+                        <i data-lucide="palette" class="w-12 h-12 text-mira-red mb-4"></i>
+                        <h3 class="text-2xl font-heading font-bold mt-4 mb-3">Consistência Visual</h3>
+                        <p class="text-mira-offwhite/80">
+                            Criativos alinhados à identidade da marca geram reconhecimento e confiança.
+                        </p>
+                    </div>
+                    <!-- Card 2: Alcance Estratégico -->
+                    <div class="bg-gray-900/50 p-8 rounded-lg border border-gray-800 transition-all duration-300 hover:border-mira-red hover:-translate-y-2 reveal-fade-up" style="transition-delay: 0.2s;">
+                        <i data-lucide="target" class="w-12 h-12 text-mira-red mb-4"></i>
+                        <h3 class="text-2xl font-heading font-bold mt-4 mb-3">Alcance Estratégico</h3>
+                        <p class="text-mira-offwhite/80">
+                            Campanhas direcionadas para o público certo, na hora certa (Tráfego Pago).
+                        </p>
+                    </div>
+                    <!-- Card 3: Resultados Reais -->
+                    <div class="bg-gray-900/50 p-8 rounded-lg border border-gray-800 transition-all duration-300 hover:border-mira-red hover:-translate-y-2 reveal-fade-up" style="transition-delay: 0.4s;">
+                        <i data-lucide="trending-up" class="w-12 h-12 text-mira-red mb-4"></i>
+                        <h3 class="text-2xl font-heading font-bold mt-4 mb-3">Resultados Reais</h3>
+                        <p class="text-mira-offwhite/80">
+                            ROI comprovado com métricas claras e otimizações contínuas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 5. Seção “Metodologia” ===== -->
+        <section id="metodologia" class="bg-mira-offwhite text-mira-black py-20 md:py-32">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl md:text-5xl font-heading font-bold text-center mb-4 reveal-fade-up">
+                    Nosso <span class="text-mira-red">Processo</span>
+                </h2>
+                
+                <div class="max-w-4xl mx-auto">
+                    <!-- Parte 1: 1º Mês -->
+                    <div class="bg-white p-8 md:p-10 rounded-lg shadow-xl border border-gray-200 reveal-fade-up mb-12">
+                        <h3 class="text-3xl font-heading font-bold text-center mb-2">1º Mês: Construindo Confiança</h3>
+                        <p class="text-center text-lg text-gray-700 mb-8">
+                            Demonstramos valor <span class="font-bold text-mira-red">sem custo de serviço</span>. Você investe apenas no tráfego.
+                        </p>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
+                            <div class="flex flex-col items-center p-4 bg-mira-offwhite rounded-lg">
+                                <i data-lucide="settings-2" class="w-10 h-10 text-mira-red mb-2"></i>
+                                <span class="font-semibold">Gestão Meta Ads</span>
+                            </div>
+                            <div class="flex flex-col items-center p-4 bg-mira-offwhite rounded-lg">
+                                <i data-lucide="image" class="w-10 h-10 text-mira-red mb-2"></i>
+                                <span class="font-semibold">Criativos Personalizados</span>
+                            </div>
+                            <div class="flex flex-col items-center p-4 bg-mira-offwhite rounded-lg col-span-2 md:col-span-1">
+                                <i data-lucide="pie-chart" class="w-10 h-10 text-mira-red mb-2"></i>
+                                <span class="font-semibold">Relatório Completo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Parte 2: Proposta Regular -->
+                    <div class="bg-mira-black text-mira-white p-8 md:p-10 rounded-lg shadow-2xl reveal-fade-up">
+                        <h3 class="text-3xl font-heading font-bold text-center mb-8">Proposta Regular: <span class="text-mira-red">Crescimento Sustentável</span></h3>
+                        
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <!-- Lista de Entregáveis -->
+                            <div>
+                                <h4 class="text-xl font-heading font-bold mb-4 text-mira-red">O que inclui:</h4>
+                                <ul class="space-y-3">
+                                    <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-mira-red mr-3"></i>Gestão completa de tráfego</li>
+                                    <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-mira-red mr-3"></i>4–6 Criativos mensais</li>
+                                    <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-mira-red mr-3"></i>Relatórios quinzenais</li>
+                                    <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-mira-red mr-3"></i>Suporte via WhatsApp</li>
+                                    <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-mira-red mr-3"></i>Reuniões mensais</li>
+                                </ul>
+                            </div>
+                            <!-- Investimento -->
+                            <div class="bg-gray-900/50 p-6 rounded-lg border border-gray-800 text-center flex flex-col justify-center">
+                                <p class="text-lg font-bold text-mira-offwhite/80">Investimento Mensal</p>
+                                <p class="text-3xl lg:text-4xl font-heading font-bold text-mira-red my-2">R$ 1.200 – R$ 1.500</p>
+                                <p class="text-gray-400">+ Verba Mínima de Tráfego (R$ 300,00)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 6. Seção “Por que escolher a MIRA?” ===== -->
+        <section id="por-que-mira" class="bg-mira-red text-mira-white py-20 md:py-32">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl md:text-5xl font-heading font-bold text-center mb-16 reveal-fade-up">
+                    Por que escolher a <span class="text-mira-black">MIRA</span>?
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-black/20 p-8 rounded-lg text-center transition-all duration-300 hover:bg-black/40 hover:-translate-y-2 reveal-fade-up">
+                        <i data-lucide="shield-check" class="w-12 h-12 text-white mx-auto mb-4"></i>
+                        <h3 class="text-2xl font-heading font-bold mb-3">Risco Zero</h3>
+                        <p class="text-mira-offwhite/90">Experimente nosso serviço no primeiro mês sem custo de gestão.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-black/20 p-8 rounded-lg text-center transition-all duration-300 hover:bg-black/40 hover:-translate-y-2 reveal-fade-up" style="transition-delay: 0.2s;">
+                        <i data-lucide="file-text" class="w-12 h-12 text-white mx-auto mb-4"></i>
+                        <h3 class="text-2xl font-heading font-bold mb-3">Transparência Total</h3>
+                        <p class="text-mira-offwhite/90">Relatórios detalhados e comunicação clara sobre seus resultados.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-black/20 p-8 rounded-lg text-center transition-all duration-300 hover:bg-black/40 hover:-translate-y-2 reveal-fade-up" style="transition-delay: 0.4s;">
+                        <i data-lucide="clock" class="w-12 h-12 text-white mx-auto mb-4"></i>
+                        <h3 class="text-2xl font-heading font-bold mb-3">Economia de Tempo</h3>
+                        <p class="text-mira-offwhite/90">Foque no seu negócio, deixe o marketing e o design com a gente.</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="bg-black/20 p-8 rounded-lg text-center transition-all duration-300 hover:bg-black/40 hover:-translate-y-2 reveal-fade-up" style="transition-delay: 0.6s;">
+                        <i data-lucide="git-merge" class="w-12 h-12 text-white mx-auto mb-4"></i>
+                        <h3 class="text-2xl font-heading font-bold mb-3">Estratégia Integrada</h3>
+                        <p class="text-mira-offwhite/90">Tráfego + Design trabalhando juntos para o máximo desempenho.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 7. Seção “Contato” ===== -->
+        <section id="contato" class="bg-mira-black py-20 md:py-32" style="background-image: linear-gradient(to bottom, #000000 70%, #D72638 150%);">
+            <div class="container mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
+                <!-- Informações de Contato -->
+                <div class="reveal-fade-right">
+                    <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6">
+                        Vamos <span class="text-mira-red">MIRAR</span> juntos?
+                    </h2>
+                    <p class="text-xl text-mira-offwhite/80 mb-8">
+                        Com a MIRA, você investe em resultados de verdade. Fale conosco e vamos traçar a melhor estratégia para o seu negócio.
+                    </p>
+                    <div class="space-y-5">
+                        <a href="https://wa.me/5587996515872" target="_blank" class="flex items-center text-lg hover:text-mira-red transition-colors group">
+                            <i data-lucide="phone" class="w-6 h-6 mr-4 text-mira-red group-hover:scale-110 transition-transform"></i>
+                            <span>(87) 9.9651-5872 (WhatsApp)</span>
+                        </a>
+                        <a href="mailto:miramktt@gmail.com" class="flex items-center text-lg hover:text-mira-red transition-colors group">
+                            <i data-lucide="mail" class="w-6 h-6 mr-4 text-mira-red group-hover:scale-110 transition-transform"></i>
+                            <span>miramktt@gmail.com</span>
+                        </a>
+                        <a href="https://instagram.com/miiramktt" target="_blank" class="flex items-center text-lg hover:text-mira-red transition-colors group">
+                            <i data-lucide="instagram" class="w-6 h-6 mr-4 text-mira-red group-hover:scale-110 transition-transform"></i>
+                            <span>@miiramkt</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ===== 8. Rodapé (Footer) ===== -->
+    <footer class="bg-mira-black border-t border-gray-900 py-12">
+        <div class="container mx-auto px-4 text-center text-mira-offwhite/70">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://www.instagram.com/miiramkt/" target="_blank" aria-label="Instagram" class="hover:text-mira-red transition-colors">
+                    <i data-lucide="instagram" class="w-6 h-6"></i>
+                </a>
+                <a href="https://wa.me/5587996515872" target="_blank" aria-label="WhatsApp" class="hover:text-mira-red transition-colors">
+                    <i data-lucide="phone" class="w-6 h-6"></i>
+                </a>
+                <a href="mailto:miramktt@gmail.com" aria-label="E-mail" class="hover:text-mira-red transition-colors">
+                    <i data-lucide="mail" class="w-6 h-6"></i>
+                </a>
+            </div>
+            <p class="text-sm">
+                © 2025 MIRA — Meta • Inovação • Resultado • Autenticidade
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- Link para o JavaScript -->
+    <script src="script.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  (function() {
+    script.init(service_8cw0t6r); // substitua pela sua chave pública
+  })();
+</script>
+<script src="form.js"></script> <!-- seu arquivo JS -->
+
+
+
+</body>
+</html>
+
